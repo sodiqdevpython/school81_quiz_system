@@ -10,14 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 from pathlib import Path
-import django_heroku
-import dj_database_url
-from decouple import config
 import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent                      
-# TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')                      / qo'yish kerak
-# STATIC_DIR=os.path.join(BASE_DIR,'static')                             /
+TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
+STATIC_DIR=os.path.join(BASE_DIR,'static')
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -136,16 +133,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]           / qo'yisk kerak
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')             / qk
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')       
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),    
-]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 LOGIN_REDIRECT_URL='/afterlogin'
 LOGOUT_REDIRECT_URL = '/'
-
-django_heroku.settings(locals())
