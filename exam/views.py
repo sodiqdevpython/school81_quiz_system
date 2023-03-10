@@ -18,6 +18,7 @@ from django.contrib.auth.models import User
 
 
 def home_view(request):
+    
     dict={
     'total_student':SMODEL.Student.objects.all().count(),
     'total_teacher':TMODEL.Teacher.objects.all().filter(status=True).count(),
