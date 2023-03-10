@@ -15,13 +15,10 @@ import dj_database_url
 from decouple import config
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
-STATIC_DIR=os.path.join(BASE_DIR,'static')
+BASE_DIR = Path(__file__).resolve().parent.parent                      
+# TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')                      / qo'yish kerak
+# STATIC_DIR=os.path.join(BASE_DIR,'static')                             /
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'f6((0$9gj00@%!op#3!!3pvjmzbg%#rd0$=xdp_rraiz35d%=#'
@@ -139,8 +136,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+# STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]           / qo'yisk kerak
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')             / qk
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),    
+]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
