@@ -26,7 +26,7 @@ SECRET_KEY = 'f6((0$9gj00@%!op#3!!3pvjmzbg%#rd0$=xdp_rraiz35d%=#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['134.122.67.57']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -79,23 +79,23 @@ WSGI_APPLICATION = 'onlinexam.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'namuna',
-        'USER': 'sodiq',
-        'PASSWORD': 'sodiq2005.py',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'namuna',
+#         'USER': 'sodiq',
+#         'PASSWORD': 'sodiq2005.py',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
